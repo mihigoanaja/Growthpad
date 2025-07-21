@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Grow as a Creator with Alreflections</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f4f8;
+      margin: 0;
+      color: #333;
+    }
+    header {
+      background: #1e3a8a;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+    header p {
+      margin: 10px 0 0;
+      font-size: 1.1em;
+    }
+    section {
+      max-width: 600px;
+      margin: 30px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #1e3a8a;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    ul li::before {
+      content: "🚀";
+      margin-right: 8px;
+      color: #1e3a8a;
+    }
+    form {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+    input, button {
+      padding: 12px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 1em;
+    }
+    button {
+      background: #1e3a8a;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #142e6b;
+    }
+    .success {
+      display: none;
+      color: green;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Start. Learn. Grow. Earn.</h1>
+  <p>Unlock your potential with Alreflections Programming Portal</p>
+</header>
+
+<section>
+  <h2>We Help You:</h2>
+  <ul>
+    <li>Build Real-World Projects</li>
+    <li>Monetize Your Skills Early</li>
+    <li>Get Mentorship & Community Support</li>
+    <li>Sell & Showcase Your Creations</li>
+  </ul>
+
+  <h3>Join Now — Start Your Growth Journey</h3>
+  <form id="creatorForm">
+    <input type="text" id="name" placeholder="Your Full Name" required>
+    <input type="email" id="email" placeholder="Your Email Address" required>
+    <input type="text" id="skill" placeholder="Your Skill or Interest (e.g., Web Dev)" required>
+    <button type="submit">Join the Portal</button>
+    <p class="success" id="successMsg">Thank you! We'll reach out shortly.</p>
+  </form>
+</section>
+
+<script>
+  const form = document.getElementById('creatorForm');
+  const successMsg = document.getElementById('successMsg');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const skill = document.getElementById('skill').value.trim();
+
+    if (name === '' || email === '' || skill === '') {
+      alert('Please fill in all fields.');
+      return;
+    }
+
+    successMsg.style.display = 'block';
+    form.reset();
+
+    // Ready for backend integration
+  });
+</script>
+
+</body>
+</html>
